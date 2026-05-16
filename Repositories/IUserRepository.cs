@@ -1,12 +1,13 @@
-﻿using FilmLogAPI.Models;
+﻿using FilmLogAPI.DTOs;
+using FilmLogAPI.Models;
 
 namespace FilmLogAPI.Repositories
 {
     public interface IUserRepository
     {
         Task<User?> GetUserById(int id);
-        Task<User?> GetUserByEmail(string email);
-        Task<User>AddUser(User user);
+        Task<User?> LogInUser(LogInDto dto);
+        Task<User?>AddUser(RegisterDto dto);
         Task<bool>UserExists(string  email);
     }
 }

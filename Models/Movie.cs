@@ -5,7 +5,7 @@ namespace FilmLogAPI.Models
     public class Movie
     {
         [Key]
-        public int MovieId { get; set; }
+        public string MovieId { get; set; } = string.Empty;
         [Required]
         public string Title { get; set; } = string.Empty;
         [Required]
@@ -13,7 +13,7 @@ namespace FilmLogAPI.Models
         [Required]
         public string Year { get; set; } = string.Empty;
         [Required]
-        public List<string> Actors { get; set; } = new List<string>();
+        public string Actors { get; set; } = string.Empty;
         [Required]
         public string PosterUrl { get; set; } = string.Empty;
         public List<WatchListMovie> WatchlistMovies { get; set; } = new();
